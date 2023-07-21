@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h2>WebApp в тележке</h2>
+            <p>Или приложения внутри телеграмма 💪</p>
+        </section>
+        <section>
+            <section>
+                <h2>Про меня 😎</h2>
+            </section>
+            <section>
+                <ul>
+                    <li><a href="https://github.com/mazanur">github.com/mazanur</a></li>
+                    <li><a href="https://t.me/mazanur">@mazanur</a></li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Что такое WebApp?😕</h2>
+            </section>
+            <section data-background-video="./content/c65433c8ac11a347a8.mp4"
+                     data-background-video-loop data-background-video-muted data-background-size="cover">
+            </section>
+            <section>
+                <p>
+                    Нативное приложение iOS/Android внутри телеграмма?
+                </p>
+                <ul>
+                    <li class="fragment">Нет</li>
+                </ul>
+            </section>
+            <section>
+                <p>
+                    Браузер внутри телеграмма?
+                </p>
+                <ul>
+                    <li class="fragment">Да</li>
+                </ul>
+                <aside class="notes">
+
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Преимущества 📈</h3>
+
+                <ul>
+                    <li class="fragment">Поддержка авторизации пользователя(проверка его подлинности)</li>
+                    <li class="fragment">Встроенная оплата через различных провайдеров</li>
+                    <li class="fragment">Кастомизацию под выбранную пользователем тему</li>
+                    <li class="fragment">Мультиплатформенность</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Как отобразить WebApp? 🤔</h2>
+            </section>
+
+
+            <section>
+                <h3>Есть шесть способов 😳</h3>
+                <ul>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#keyboard-button-web-apps">Из клавиатуры(keyboard)</a></li>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#inline-button-web-apps">Из встроенной кнопки(inline button)</a></li>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#launching-web-apps-from-the-menu-button">Из кнопки меню бота(bot menu button)</a></li>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#launching-web-apps-from-the-attachment-menu">Из меню вложений(attachment menu)</a></li>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#inline-mode-web-apps">Через встроенный режим(inline mode)</a></li>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#direct-link-web-apps">По прямой ссылке(direct link)</a></li>
+                </ul>
+
+            </section>
+            <section>
+                <img src="./content/fd9a32baa81dcecbe4.jpeg" data-preload>
+                </img>
+            </section>
+        </section>
+
+        <section>
+            <h3>Подробнее про каждый из способов</h3>
+        </section>
+        <section>
+
+            <section>
+                <h3>Из клавиатуры</h3>
+                <img src="./content/keyboard.png" data-preload>
+
+            </section>
+            <section>
+
+                <h3>Плюсы</h3>
+                <ul>
+                    <li class="fragment">Веб приложение может передавать данные боту текстом, вызывая метод
+                        Telegram.WebApp.sendData
+                    </li>
+                    <li class="fragment">Не нужно выставлять эндпоинты наружу для общение с веб приложением</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Минусы</h3>
+                <ul>
+                    <li class="fragment">Нет способа получить данные пользователя через переменную
+                        Telegram.WebApp.user
+                    </li>
+                    <li class="fragment">Кнопки в клавиатуре плохо заходят пользователям, для вызова веб апп</li>
+                </ul>
+            </section>
+
+            <section>
+                <video data-autoplay loop width="50%">
+                    <source data-src="./content/keyboard.MP4" type="video/mp4">
+                </video>
+            </section>
+
+        </section>
+        <section>
+            <section>
+                <h3>Из кнопки меню бота</h3>
+                <img src="./content/button.png" data-preload>
+            </section>
+            <section>
+                <h3>Плюсы</h3>
+                <ul>
+                    <li class="fragment">Доступ к данным Telegram.WebApp.user</li>
+                    <li class="fragment">Возможность из апи бота менять текст кнопки, а также url web view</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Минусы</h3>
+                <ul>
+                    <li class="fragment"> Необходима полноценная авторизация пользователя</li>
+                    <li class="fragment"></li>
+                </ul>
+            </section>
+
+            <section>
+                <video data-autoplay loop width="30%">
+                    <source data-src="./content/Пополнение_давр.MP4" type="video/mp4">
+                </video>
+            </section>
+
+        </section>
+        <section>
+
+            <section>
+                <h3>Из меню вложений 📎</h3>
+                <img src="./content/IMG_8090.PNG" data-preload>
+
+            </section>
+            <section>
+
+                <h3>Плюсы</h3>
+                <ul>
+                    <li class="fragment">Доступ к данным Telegram.WebApp.user</li>
+                    <li class="fragment">Доступ к данным Telegram.WebApp.receiver(при общение в диалоге)</li>
+                    <li class="fragment">Доступ к данным Telegram.WebApp.chat(при вызове в группе)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Минусы</h3>
+                <ul>
+                    <li class="fragment"> Платно</li>
+                    <li class="fragment"> Дорого</li>
+                    <li class="fragment"> Бесплатно работает только в ТЕСТ среде</li>
+                    <li class="fragment"></li>
+                </ul>
+            </section>
+
+
+            <section>
+                <video data-autoplay loop width="50%">
+                    <source data-src="./content/attach.MP4" type="video/mp4">
+                </video>
+            </section>
+            <section>
+                <video data-autoplay loop width="30%">
+                    <source data-src="./content/Отправка_давр.MP4" type="video/mp4">
+                </video>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h3>Из встроенной кнопки</h3>
+                <h4>(inline-mode-button)</h4>
+                <img src="./content/inline.png" data-preload>
+
+            </section>
+            <section>
+
+                <h3>Плюсы</h3>
+                <ul>
+                    <li class="fragment">Доступ к данным Telegram.WebApp.user</li>
+                    <li class="fragment">Взаимодействие с пользователем, путем отправки множества кнопок с разным
+                        контентом
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Минусы</h3>
+                <ul>
+                    <li class="fragment"> Нельзя отправить в чат текст с кнопкой сразу в WebApp</li>
+                </ul>
+            </section>
+
+            <section>
+                <video data-autoplay loop width="40%">
+                    <source data-src="./content/tubat.mp4" type="video/mp4">
+                </video>
+            </section>
+        </section>
+
+
+
+        <section>
+
+            <section>
+                <h2>Разработка ⚙</h2>
+            </section>
+            <section>
+                <h3>Обязательно к прочтению 📌</h3>
+                <ul>
+                    <li class="fragment">
+                        <a href="https://core.telegram.org/bots/webapps#testing-web-apps">Тестирование приложения</a>
+                    </li>
+                    <li class="fragment"><a href="https://core.telegram.org/bots/webapps#debug-mode-for-web-apps">Отладка
+                        приложения</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Лайфхак</h3>
+
+                <ul>
+                    <li class="fragment"> Используйте ngrok, это из серии когда вам нужно прокинуть сервис в интернет
+                    </li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h3>Безопасность 🔐</h3>
+
+                <ul>
+                    <li class="fragment"><a
+                            href="https://core.telegram.org/bots/webapps#validating-data-received-via-the-web-app">Валидирование
+                        запросов</a></li>
+                    <li class="fragment"><a
+                            href="https://github.com/mazanur/telegram-bot-api/commit/8630d67ab15cdb1503e98e198d7d1b2a3cdcc44e">Пример
+                        на Go</a></li>
+
+                    <li class="fragment">
+                                        <pre>
+                    <code data-trim data-noescape>
+secret_key = HMAC_SHA256(bot_token, "WebAppData")
+if (hex(HMAC_SHA256(data_check_string, secret_key)) == hash) {
+  // data is from Telegram
+}
+					</code></pre>
+                    </li>
+                </ul>
+
+
+            </section>
+            <section>
+                <h3>Примеры 🤖</h3>
+                <li class="fragment"><a href="https://t.me/TubatayEasyMenuBot">TubatayBot</a></li>
+                <li class="fragment"><a href="https://t.me/talkbank_wabot">Приложение банка(test server)</a></li>
+            </section>
+
+        </section>
+
+
+
+        <section>
+            <h2>Вопросы ❓</h2>
+        </section>
+        <section>
+            <h2>Спасибо за внимание 🙏</h2>
+        </section>
+    
+
+
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
+</html>
